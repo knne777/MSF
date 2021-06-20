@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Poppins, sans-serif
+}
+
+body{
+
+    background: rgb(0,169,250);
+    background: linear-gradient(180deg, rgba(0,169,250,1) 0%, rgba(8,40,77,1) 100%);
+    min-height: 100vh;
+}
+
+header{
+   background: rgba(0, 0, 0, 0.5);
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.mx800px{
+    width: 800px;
+    max-width: 100%;
+}
+
+.p15{
+    padding: 15px;
+}
+
+.txt_white{
+    color: white;
+}
+
+.editor{
+    background: rgba(0, 0, 0, 0.76);
+    width: 1000px;
+    height: 720px;
+    border-radius: 15px;
+    margin: 15px;
+    position: relative;
+    padding: 27px 15px;
+}
+
+.options{
+    background: rgba(255, 255, 255, 0.418);
+    width: 300px;
+    height: 720px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.green{
+    color: rgb(0, 192, 0) !important;
+}
+
+.green2{
+    color: rgba(0, 192, 0, 0.562) !important;
+}
+
+.white{
+    color: white;
+}
+
+.enum{
+    position: absolute;
+}
+
+.num{
+    margin: 1px;
+    color: rgba(255, 255, 255, 0.329);
+    width: 10px;
+    text-align: center;
+}
+
+.num.activate{
+    margin: 1px;
+    color: rgba(255, 255, 255, 0.952);
+    width: 10px;
+    text-align: center;
+}
+
+.enum.left{
+    top: 27;
+    left: 0;
+}
+
+.enum.top{
+    top: 0;
+    left: 0;
+}
+
+.input{
+    width: 12px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    color: rgb(0, 192, 0);
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.table{
+    padding: 0 5px;
+}
+
+.selec_left{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 2px solid rgb(0, 102, 255);
+    border-left: 2px solid rgb(0, 102, 255);
+    border-bottom: 2px solid rgb(0, 102, 255);
+}
+
+.selec_center{
+    border-top: 2px solid rgb(0, 102, 255);
+    border-bottom: 2px solid rgb(0, 102, 255);
+}
+
+.selec_right{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 2px solid rgb(0, 102, 255);
+    border-right: 2px solid rgb(0, 102, 255);
+    border-bottom: 2px solid rgb(0, 102, 255);
+}
+
+.col{
+    position: relative;
+}
+
+.add{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgb(163, 103, 131);
+    bottom: -3px;
+    right: -3px;
+    cursor: cell;
+    display: none;
+}
+
+.add.visible{
+    display: inline;
+    background: rgb(0, 132, 255);
+}
+
+.element{
+    width: 250px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.671);
+    border-radius: 16px;
+    margin: 5px;
+}
+
+.in_add{
+    background: rgba(128, 128, 128, 0.445);
+    border: none;
+    width: 120px;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+
+.label{
+    margin: 10px;
+}
+
+label{
+    width: 70px;
+}
+
+.add_short{
+    width: 47px;
+    background: rgba(128, 128, 128, 0.445);
+    border: none;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.btn{
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 100;
+    transition: 0.5s;
+}
+
+.accept{
+    background: rgb(38, 158, 214);
+}
+
+.accept:hover{
+    background: rgb(18, 83, 114);
+    color: white;
+    transition: 0.5s;
+}
+
+#menu_add.activate{
+    display: inline;
+}
+
+#menu_add{
+    display: none;
+}

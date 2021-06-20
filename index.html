@@ -1,12 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>MSF</title>
 </head>
-<body>
-    
+
+<body onload="load()">
+    <header>
+        <div class="row p15 txt_white">
+            <img src="RSDEV.png" alt="RSDEV" height="60px">
+        </div>
+    </header>
+    <div class="container row">
+        <div class="editor green">
+            <div class="enum top row">
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+            </div>
+            <div class="enum left">
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num green2">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+            </div>
+            <div class="table" id="table"></div>
+        </div>
+        <div class="options">
+            <div class="row">
+                <p class="p15">
+                    OPCIONES
+                </p>
+            </div>
+            <div class="row p15">
+                <span>X:&nbsp;</span>
+                <span id="X_loc"></span>
+                &nbsp; &nbsp;
+                <span>Y:&nbsp;</span>
+                <span id="Y_loc"></span>
+            </div>
+            <div class="row">
+                <div class="element">
+                    <div class="row p15" onclick="tottle(this)">
+                        AGREGAR
+                    </div>
+                    <div id="menu_add">
+                        <div class="row label">
+                            <label for="name">Nombre: </label>
+                            <input type="text" name="name" id="name" class="in_add" maxlength="8">
+                        </div>
+                        <div class="row label">
+                            <label for="row">Fila: </label>
+                            <input type="number" name="row" id="row" class="in_add" max="26" min="0">
+                        </div>
+                        <div class="row label">
+                            <label for="range_min">Rango: </label>
+                            <input type="number" name="range" id="range_min" class="add_short" max="80" min="0">
+                            :
+                            <input type="number" name="range" id="range_max" class="add_short" max="80" min="0">
+                        </div>
+                        <div class="row label">
+                            <label for="color">Color: </label>
+                            <select name="color" id="color" class="in_add">
+                                <option value="blue">blue</option>
+                                <option value="red">red</option>
+                                <option value="pink">pink</option>
+                                <option value="green">green</option>
+                                <option value="turquoise">turquoise</option>
+                                <option value="yellow">yellow</option>
+                                <option value="neutral">neutral</option>
+                            </select>
+                        </div>
+                        <div class="row label">
+                            <div class="row">
+                                <label for="atrib">Atributos: </label>
+                                <div class="in_add">
+                                    <label for="a1">Protect</label>
+                                    <input type="checkbox" name="a1" id="a1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row label">
+                            <label for=""></label>
+                            <div class="in_add">
+                                <label for="a1">Atrib1</label>
+                                <input type="checkbox" name="a1" id="a1">
+                            </div>
+                        </div>
+                        <div class="row label">
+                            <label for=""></label>
+                            <div class="in_add">
+                                <label for="a1">Atrib1</label>
+                                <input type="checkbox" name="a1" id="a1">
+                            </div>
+                        </div>
+                        <div class="row label">
+                            <label for=""></label>
+                            <div class="in_add">
+                                <label for="a1">Atrib1</label>
+                                <input type="checkbox" name="a1" id="a1">
+                            </div>
+                        </div>
+                        <div class="row p15">
+                            <button class="btn accept">Agregar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="add_ele">
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="main.js"></script>
+
 </html>
