@@ -5,7 +5,28 @@
 	box-sizing: border-box;
 	font-family: Poppins, sans-serif
 }
-
+html{
+    overflow-y: scroll;
+    scrollbar-color:#22445a rgba(0, 0, 0, 0.322);
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+	width: 5px;
+  }
+/* Track */
+::-webkit-scrollbar-track {
+	background: black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #22445a; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #1b3546; 
+  }
 body{
 
     background: rgb(0,169,250);
@@ -53,11 +74,19 @@ header{
     height: 720px;
     border-radius: 15px;
     margin: 15px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 
 .green{
     color: rgb(0, 192, 0) !important;
 }
+.blue{color: rgb(0, 68, 255) !important;}
+.red {color:red !important;}
+.pink {color:rgb(211, 90, 157) !important;}
+.turquoise {color:turquoise !important;}
+.yellow {color: yellow !important;}
+.neutral{color: white !important;}
 
 .green2{
     color: rgba(0, 192, 0, 0.562) !important;
@@ -113,22 +142,22 @@ header{
 .selec_left{
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    border-top: 2px solid rgb(0, 102, 255);
-    border-left: 2px solid rgb(0, 102, 255);
-    border-bottom: 2px solid rgb(0, 102, 255);
+    border-top: 1px solid rgb(0, 102, 255);
+    border-left: 1px solid rgb(0, 102, 255);
+    border-bottom: 1px solid rgb(0, 102, 255);
 }
 
 .selec_center{
-    border-top: 2px solid rgb(0, 102, 255);
-    border-bottom: 2px solid rgb(0, 102, 255);
+    border-top: 1px solid rgb(0, 102, 255);
+    border-bottom: 1px solid rgb(0, 102, 255);
 }
 
 .selec_right{
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    border-top: 2px solid rgb(0, 102, 255);
-    border-right: 2px solid rgb(0, 102, 255);
-    border-bottom: 2px solid rgb(0, 102, 255);
+    border-top: 1px solid rgb(0, 102, 255);
+    border-right: 1px solid rgb(0, 102, 255);
+    border-bottom: 1px solid rgb(0, 102, 255);
 }
 
 .col{
@@ -157,6 +186,7 @@ header{
     background: rgba(255, 255, 255, 0.671);
     border-radius: 16px;
     margin: 5px;
+    position: relative;
 }
 
 .in_add{
@@ -167,6 +197,10 @@ header{
     padding: 5px;
     border-radius: 4px;
     
+}
+
+.in_add.error{
+    border: 2px solid red;
 }
 
 .label{
@@ -184,6 +218,10 @@ label{
     margin: 0 10px;
     padding: 5px;
     border-radius: 4px;
+}
+
+.add_short.error{
+    border: 2px solid red;
 }
 
 .btn{
@@ -204,10 +242,11 @@ label{
     transition: 0.5s;
 }
 
-#menu_add.activate{
-    display: inline;
+.menu.activate{
+    display: contents;
 }
 
-#menu_add{
+.menu{
     display: none;
+    position: absolute;
 }

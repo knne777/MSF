@@ -129,7 +129,7 @@
             </div>
             <div class="table" id="table"></div>
         </div>
-        <div class="options">
+        <div class="options" id="options">
             <div class="row">
                 <p class="p15">
                     OPCIONES
@@ -147,7 +147,7 @@
                     <div class="row p15" onclick="tottle(this)">
                         AGREGAR
                     </div>
-                    <div id="menu_add">
+                    <div id="menu_add" class="menu">
                         <div class="row label">
                             <label for="name">Nombre: </label>
                             <input type="text" name="name" id="name" class="in_add" maxlength="8">
@@ -165,10 +165,10 @@
                         <div class="row label">
                             <label for="color">Color: </label>
                             <select name="color" id="color" class="in_add">
+                                <option value="green">green</option>
                                 <option value="blue">blue</option>
                                 <option value="red">red</option>
                                 <option value="pink">pink</option>
-                                <option value="green">green</option>
                                 <option value="turquoise">turquoise</option>
                                 <option value="yellow">yellow</option>
                                 <option value="neutral">neutral</option>
@@ -177,42 +177,23 @@
                         <div class="row label">
                             <div class="row">
                                 <label for="atrib">Atributos: </label>
-                                <div class="in_add">
-                                    <label for="a1">Protect</label>
-                                    <input type="checkbox" name="a1" id="a1">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row label">
-                            <label for=""></label>
-                            <div class="in_add">
-                                <label for="a1">Atrib1</label>
-                                <input type="checkbox" name="a1" id="a1">
-                            </div>
-                        </div>
-                        <div class="row label">
-                            <label for=""></label>
-                            <div class="in_add">
-                                <label for="a1">Atrib1</label>
-                                <input type="checkbox" name="a1" id="a1">
-                            </div>
-                        </div>
-                        <div class="row label">
-                            <label for=""></label>
-                            <div class="in_add">
-                                <label for="a1">Atrib1</label>
-                                <input type="checkbox" name="a1" id="a1">
+                                <select name="atrib" id="atrib" class="in_add" multiple>
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row p15">
-                            <button class="btn accept">Agregar</button>
+                            <button class="btn accept" onclick="add_element()">Agregar</button>
                         </div>
                     </div>
 
                 </div>
             </div>
             <div class="row">
-                <div class="add_ele">
+                <div class="add_ele" id="elements">
 
                 </div>
             </div>
@@ -222,3 +203,4 @@
 <script src="main.js"></script>
 
 </html>
+
